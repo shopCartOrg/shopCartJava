@@ -4,12 +4,13 @@ import java.util.Scanner;
  * Created by everardosifuentes on 5/15/17.
  */
 public class cart {
+
+
     public static void main(String[] args) {
 
-        //Fer NANDO
-
-
         Scanner sc = new Scanner(System.in);
+
+
         String anotherItem;
 
     do {
@@ -27,7 +28,7 @@ public class cart {
         System.out.println(" ");
 
         if (menuSelection == 1) {
-            gotoItem();
+            gotoItem(sc);
             //item method
         } else if (menuSelection == 2) {
             //goto receipt method
@@ -54,15 +55,37 @@ public class cart {
 
     } // end main method
 
-    public static void gotoItem() {    // choose soda opt..return String
+    public static void gotoItem(Scanner sc) {    // choose soda opt..return String
+
 
         System.out.println( "Soda Options");
         System.out.println("1. Coke ");
         System.out.println("2. Pepsi ");
         System.out.println("3. Big Red ");
 
-        // sout which soda you want?
-        // if any soda then method-->qty
+        System.out.println("Choose soda option:  ");
+        int sodaOption = sc.nextInt();
+
+
+        System.out.println(("How many sodas do you wish to buy:  "));
+        double sodaQunatity = sc.nextDouble();
+
+        System.out.println("Enter price per soda:  ");
+        double sodaPrice = sc.nextDouble();
+
+        System.out.println("Total purchase price: " + sodaQunatity * sodaPrice);
+
+        // quantity method
+        // price per soda method
+        // calculate method
+        // String totalPrice = "Coke,  3,   2.00,  6.00
+
+
+
+    }
+
+
+    public static void sodaOptionCalculate() {
 
     }
     public static void gotoReceipt(){
