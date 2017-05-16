@@ -13,7 +13,8 @@ public class cart {
 
         String anotherItem;
         String combinedReceipt;
-        String finalString = "";
+        String finalString = "  Item  |  Quanity  |  Price  |  Total\n";
+        finalString += "-------------------------------------\n";
 
     do {
         System.out.println("===== Menu =====");
@@ -49,13 +50,12 @@ public class cart {
 
             double itemTotal = sodaQuantity * sodaPrice;
 
-            finalString += (sodaOption + "," + sodaQuantity + "," + sodaPrice + "," + itemTotal + "\n");
-            System.out.println(finalString);
+            finalString += String.format(" %-10f  |  %-10f  | $ %-2f  |  $%-2f \n", sodaOption, sodaQuantity, sodaPrice, itemTotal);
 
 
         } else if (menuSelection == 2) {
             //goto receipt method
-            gotoReceipt();
+            gotoReceipt(finalString);
         } else if (menuSelection == 3) {
             //exit method
             gotoExit();
@@ -78,22 +78,20 @@ public class cart {
 
     } // end main method
 
-//    public static double gotoItem(Scanner sc) {    // choose soda opt..return String
-//
-//
-//
-//
-//    }
 
 
 
-    public static void gotoReceipt(){
+    public static void gotoReceipt(String finalString){
+
+        System.out.println(finalString);
+
 
     }
     public static void gotoExit(){
 
     }
-    public static void gotoOutOfBounds(){
-
+    public static void gotoOutOfBounds() {
+        System.out.println("Invalid selection!");
     }
+
 } // end of class
