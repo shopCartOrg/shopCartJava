@@ -13,8 +13,11 @@ public class cart {
 
         String anotherItem;
         String combinedReceipt;
-        String finalString = "  Item  |  Quanity  |  Price  |  Total\n";
-        finalString += "-------------------------------------\n";
+        String finalString = "";
+        double sodaOption = 0;
+        double sodaQuantity = 0;
+        double sodaPrice = 0;
+        double itemTotal = 0;
 
     do {
         System.out.println("===== Menu =====");
@@ -39,23 +42,23 @@ public class cart {
             System.out.println("3. Big Red ");
 
             System.out.println("Choose soda option:  ");
-            double sodaOption = sc.nextDouble();
+            sodaOption = sc.nextDouble();
 
 
             System.out.println(("How many sodas do you wish to buy:  "));
-            double sodaQuantity = sc.nextDouble();
+             sodaQuantity = sc.nextDouble();
 
             System.out.println("Enter price per soda:  ");
-            double sodaPrice = sc.nextDouble();
+             sodaPrice = sc.nextDouble();
 
-            double itemTotal = sodaQuantity * sodaPrice;
+             itemTotal = sodaQuantity * sodaPrice;
 
-            finalString += String.format(" %-10f  |  %-10f  | $ %-2f  |  $%-2f \n", sodaOption, sodaQuantity, sodaPrice, itemTotal);
 
 
         } else if (menuSelection == 2) {
             //goto receipt method
-            gotoReceipt(finalString);
+//            gotoReceipt(finalString);
+
         } else if (menuSelection == 3) {
             //exit method
             gotoExit();
@@ -83,7 +86,8 @@ public class cart {
 
     public static void gotoReceipt(String finalString){
 
-        System.out.println(finalString);
+//        System.out.println(finalString);
+//        finalString = String.format(" %-10f  |  %-10f  | $ %-2f  |  $%-2f \n", sodaOption, sodaQuantity, sodaPrice, itemTotal);
 
 
     }
