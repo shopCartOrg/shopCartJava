@@ -58,6 +58,8 @@ public class cart {
         } else if (menuSelection == 2) {
             //goto receipt method
 //            gotoReceipt(finalString);
+            String.format(" %-10f  |  %-10f  | $ %-2f  |  $%-2f \n", sodaOption, sodaQuantity, sodaPrice, itemTotal);
+
 
         } else if (menuSelection == 3) {
             //exit method
